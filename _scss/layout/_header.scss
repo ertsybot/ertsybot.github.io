@@ -1,0 +1,172 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+
+// For subheader
+
+.sub-head {
+	background: $main !important;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	min-height: 100px;
+	vertical-align:middle;
+	text-align:center;
+	h2{
+		color: $white;
+	}
+
+}
+
+.sub-head-prod {
+	background: $main !important;
+	min-height: 5px;
+	vertical-align:middle;
+	text-align:center;
+	h2{
+		color: $white;
+	}
+
+}
+
+
+/* ===================================
+    Header
+====================================== */
+
+/* header style 1 */
+.header-style1 .nav-button .join-us {  border-color: #000000; border: 2px solid; background-color: transparent; color: #000000; padding: 1px 20px !important;}
+.header-style1 .nav-button .join-us:hover { background: transparent;}
+.header-style1 .nav-button:last-child { margin-left: 20px;}
+.header-style1 .black-header.navbar li a { color: #ffffff;}
+.header-style1 .black-header.navbar .nav-button .join-us { border: 2px solid #ffffff; background-color: transparent; color: #ffffff;}
+.header-style1 .black-header .nav-button .join-us:hover { background: transparent;}
+
+/* header style 2 */
+.header-style2 .black-header li a, .header-style2 .black-header li a:before { color: #ffffff;}
+.header-style2 li a:before { content: "\f111"; font-size: 6px; color: #959595; font-family: fontawesome; right: -23px; position: absolute; top: -1px}
+.header-style2 li:last-child a:before { display: none;}
+
+/* header style 3 */
+.header-style3 .logo { border-bottom: 1px solid #eaeaea; padding-bottom: 20px; text-align: center; margin-bottom: 15px;}
+.header-style3 .navbar-nav { width: 100%;}
+.header-style3 .navbar li { display: inline-block; float: none; margin: 0 20px}
+.header-style3 .navbar li a { font-weight: 400; color: #797979;}
+.header-style3 .black-header.navbar li a { color: #ffffff;}
+.header-style3 .black-header .logo { border-color: #2a2a2a;}
+
+/* header style 4 */
+.header-style4 .header-top { border-bottom: 1px solid #eaeaea; padding: 10px 0;}
+.header-style4 .header-top .mail { color: #797979; font-size: 11px; float: left;}
+.header-style4 .header-top .mail a, .header-style4 .white-header .header-bottom li a { color: #797979;}
+.header-style4 .header-top a:hover { opacity: 0.5;}
+.header-style4 .social a { margin: 0 13px; font-size: 14px; color: #797979;}
+.header-style4 .social a:last-child {margin-right: 0}
+.header-style4 .header-bottom { padding: 25px 0;}
+.header-style4 .header-bottom li:last-child { margin-right: 0;}
+.header-style4 .header-bottom li a { color: #fff; line-height: 19px;}
+.header-style4 .header-bottom li a:before { content: "\f111"; font-size: 6px; color: #ffffff; font-family: fontawesome; right: -23px; position: absolute;}
+.header-style4 .header-bottom li:last-child a:before { display: none;}
+.header-style4 .white-header .header-top .mail, .header-style4 .white-header .header-top .mail a, .header-style4 .white-header .social a { color: #555555;}
+
+/* header style 5 */
+.header-style5 .social { float: right; margin: 12px 0 9px 30px;}
+.header-style5 .social a { font-size: 14px; color: #242424; margin: 0 9px;}
+.header-style5 .navbar li a {font-size: 11px;}
+.header-style5 .social a:last-child { margin-right: 0;}
+.header-style5 .social a:hover { opacity: 0.5;}
+.header-style5 .black-header .social a { color: #ffffff;}
+.header-style5 .black-header.navbar li a { color: #ffffff;}
+
+/* header style 6 */
+.header-style6 .navbar { border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: absolute;}
+.header-style6 .navbar li a { color: #ffffff;}
+.header-style6 h1 { line-height: 60px;}
+.header-style6 .application-mobile { position: absolute; float: right; right: 0; bottom: 0;}
+
+/* header style 7 */
+.header-style7 .navbar { border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: absolute;}
+.header-style7 .navbar li a { color: #fff; line-height: 24px;}
+.header-style7 .date {display: inline-block; margin-bottom: 30px; padding: 3px 20px;}
+.header-style7 .header-banner .counter-content{height: 110px; width: 110px; background: #fff; display: inline-block; border-radius: 50%; padding: 28px 0; vertical-align: top; margin-right: 15px;}
+.header-style7 .navbar .nav-button a { background-color: transparent; border: 2px solid #fff !important;}
+.event-counter .counter-box { height: 150px; width: 150px; background: rgba(0,0,0,.4); display: inline-block; border-radius: 50%; padding: 38px 0; vertical-align: top; margin-right: 20px; text-align: center;}
+.event-counter .counter-box .number { display: block; color: #fff; font-weight: 300; font-size: 50px; line-height: 55px; letter-spacing:-1px}
+.event-counter .counter-box span { color: #fff; font-weight: 600; font-size: 13px; line-height: 24px; text-transform: uppercase;}
+
+/* header style 8 */
+.header-style8 .navbar { padding: 20px 40px; position: absolute;}
+.header-style8 .shrink-transparent-header-dark.shrink { padding: 11px 40px;}
+.header-style8 .navbar .nav-button a { background-color: #ffffff; color: #000000;}
+.header-style8 .one-fourth-screen { min-height: 750px;}
+.header-style8 .navbar li a { color: #ffffff;}
+.header-style8 .header-banner .banner-icon:hover, .header-style8 .header-banner .banner-icon:focus {color: #ffffff !important;}
+
+/* header style 9 */
+.header-style9 .full-header { padding: 0 40px; }
+
+/* header style 12 */
+.header-style12 .navbar { padding: 23px 0;}
+.header-style12 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+/* header style 13 */
+.header-style13 .navbar { padding: 23px 0;}
+.header-style13 .header-bottom { padding: 25px 0;}
+.header-style13 .social a{font-size: 14px; margin: 0 12px; color:#292a2a}
+.header-style13 .social a:hover{ opacity: 0.5;}
+.header-style13 .social a{ color: #000;}
+.header-style13 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+/* header style 14 */
+.header-style14 .navbar { padding: 23px 0;}
+.header-style14 .header-bottom { padding: 25px 0;}
+.header-style14 .social a{font-size: 14px; margin: 0 12px; color:#292a2a}
+.header-style14 .social a:hover{ opacity: 0.5;}
+.header-style14 .social a{ color: #fff;}
+.header-style14 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+/* header style 15 */
+.header-style15 .navbar { padding: 23px 0;}
+.header-style15 .header-bottom { padding: 25px 0;}
+.header-style15 .social a{font-size: 14px; margin: 0 12px; color:#292a2a}
+.header-style15 .social a:hover{ opacity: 0.5;}
+.header-style15 .social a{ color: #000;}
+.header-style15 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+/* header style 29 */
+.header-style29 .navbar { padding: 23px 0;}
+.header-style29 .header-bottom { padding: 25px 0;}
+.header-style29 .social a{font-size: 14px; margin: 0 12px; color:#292a2a}
+.header-style29 .social a:hover{ opacity: 0.5;}
+.header-style29 .social a{ color: #000;}
+.header-style29 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+/* header style 30 */
+.header-style30 .navbar { padding: 23px 0;}
+.header-style30 .header-bottom { padding: 25px 0;}
+.header-style30 .social a{font-size: 14px; margin: 0 12px; color:#292a2a}
+.header-style30 .social a:hover{ opacity: 0.5;}
+.header-style30 .social a{ color: #000;}
+.header-style30 .navbar.shrink-nav.shrink { padding: 18px 0; }
+
+
+
+/* header style 16 */
+.header-style16 .navbar li a { color: #fff; line-height: 24px;}
+
+/* header style 25 */
+.outside-image { position: absolute; right: 0; bottom: 0; top: 0; z-index: 99;}
+.outside-image-sub {left: 0;}
+.outside-image-sub img { height: 100%; width: auto; max-width: none; }
+
+/* transparent header */
+.shrink-transparent-header-dark.shrink { background: $white !important;}
+.shrink-transparent-header-light.shrink { background: #ffffff !important;}
+.shrink-transparent-header-light.shrink.navbar li a { color: #282828; }
+.shrink-transparent-header-light.shrink.navbar .nav-button a { border: 2px solid #000; color: #fff;}
+
+/* header border bottom */
+// .header-border-light {border-bottom: 1px solid rgba(255,255,255,.1)}
+.header-border-dark {border-bottom: 1px solid rgba(0,0,0,.1)}
+.light-header.navbar li.active a { border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+.dark-header.navbar li.active a { border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
