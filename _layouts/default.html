@@ -19,11 +19,17 @@
       <div class="cd-cover-layer"></div>
     <div class="cd-loading-bar"></div>
     <main>
+
       <div class="cd-index cd-main-content">
+
         <div>
+          <div class="logo-header container">
+           <img src="{{ root }}/assets/img/ertbot.jpg">
+          </div>
+        
             <ul class="list-inline">
             {% for nav in site.data.navigation %}
-              <li class="nav-item {% if page.url == nav.href %}active{% endif %}">
+              <li class="list-inline-item nav-item {% if page.url == nav.href %}active{% endif %}">
                 <a class="nav-link {% if nav.subcategories != null %}has-subcat{% endif %}" href="{{ nav.href }}" data-type="page-transition">{{ nav.title }}</a>
                 {% if nav.subcategories != null %}
                   <span class="dropdown-chevron-mobile"></span>
