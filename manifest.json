@@ -1,0 +1,21 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Home Page - CV",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://simplejobs.obelisksecurity.com/",
+    "short_name": "Home Page - CV",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/favicon.ico",
+            "sizes": "16x16 32x32 48x48 64x64"
+        }
+    ]
+}
