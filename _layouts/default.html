@@ -1,63 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="stylesheet" href="{{ root }}/css/main.css">
-    <link rel="stylesheet" href="{{ root }}/css/reset.css"> 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-      <script src="{{ root }}/js/modernizr.js"></script> 
-  </head>
-  <body>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include head.html %}
 
-<!-- {% include topbar.html %} -->
+  <body class="no-overflow-x" data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     {% include header.html %}
-      <div class="cd-cover-layer"></div>
-    <div class="cd-loading-bar"></div>
-    <main>
-
-      <div class="cd-index cd-main-content">
-
-        <div>
-          <div class="logo-header container">
-           <img src="{{ root }}/assets/img/ertbot.jpg">
-          </div>
-        
-            <ul class="list-inline">
-            {% for nav in site.data.navigation %}
-              <li class="list-inline-item nav-item {% if page.url == nav.href %}active{% endif %}">
-                <a class="nav-link {% if nav.subcategories != null %}has-subcat{% endif %}" href="{{ nav.href }}" data-type="page-transition">{{ nav.title }}</a>
-                {% if nav.subcategories != null %}
-                  <span class="dropdown-chevron-mobile"></span>
-                {% endif %}
-               <!--  {% if nav.subcategories != null %}
-                  <ul class="subcategory">
-                    {% for subcategory in nav.subcategories %}
-                      <li class="nav-subitem">
-                        <a class="nav-sublink" href="{{ subcategory.subhref }}">
-                          {{ subcategory.subtitle }}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                {% endif %} -->
-              </li>
-            {% endfor %}
-          </ul>
-          {{ content }}
-        </div>
-      </div>
-    </main>
-
-  
     
-<!--     {% include footer.html %} -->
-    <script src="{{ root }}/js/dist/app.bundle.js"></script>
-    <script src="{{ root }}/js/jquery-2.1.1.js"></script>
-    <script src="{{ root }}/js/main.js"></script> <!-- Resource jQuery -->
+
+
+
+
+            {{ content }}
+
+
+   
+    {% include footer.html %}
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/main.js"></script>
   </body>
 </html>

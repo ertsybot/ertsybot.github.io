@@ -1,42 +1,305 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ertbot Portfolio</title>
-    <description>Awesome Designer From Southeast Asia
-</description>
-    <link>http://ertbot.co/</link>
-    <atom:link href="http://ertbot.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Feb 2018 17:41:03 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Feb 2018 17:41:03 +0800</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-17T02:13:10+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Enrico Tan III - Designer</title><subtitle>A Designer focusing into UX, UI &amp; upto frontend development through coding and creating multimedia assets.</subtitle><entry><title type="html">Changing Timezone on Heroku</title><link href="http://localhost:4000/cloud/service/2014/05/10/changing-timezone-on-heroku.html" rel="alternate" type="text/html" title="Changing Timezone on Heroku" /><published>2014-05-10T00:00:00+08:00</published><updated>2014-05-10T00:00:00+08:00</updated><id>http://localhost:4000/cloud/service/2014/05/10/changing-timezone-on-heroku</id><content type="html" xml:base="http://localhost:4000/cloud/service/2014/05/10/changing-timezone-on-heroku.html">&lt;h2&gt;
+	Howdy! I know you're here because you're a &lt;code&gt;Heroku&lt;/code&gt; fan or a forced &lt;code&gt;Heroku&lt;/code&gt; user.
+&lt;/h2&gt;
+&lt;p&gt;
+	&lt;b&gt;Well,&lt;/b&gt; it's not a big deal though.
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;b&gt;Honestly,&lt;/b&gt; I really like how you can wrap up things quickly via Heroku. Heroku's automation is way bitcher than bitch. I'm a fan, YES! But it's not that I can always afford their sky-high packages.
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;b&gt;So much about it,&lt;/b&gt; I'll shut my mouth now before a Heroku spy learns everything about me. I want to live longer, you know.
+&lt;/p&gt;
+&lt;h2&gt;What is a timezone?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/posts/timezone.png&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Timezone,&lt;/b&gt; is a region that has a uniform standard time for legal, commercial, and social purposes. It is convenient for areas in close commercial or other communication to keep the same time, so time zones tend to follow the boundaries of countries and their subdivisions.&lt;/p&gt;
+&lt;!-- &lt;p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br/&gt;&amp;lt;html &lt;b&gt;class=&quot;fuelux&quot;&lt;/b&gt; lang=&quot;en&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;	 --&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;By the way,&lt;/strong&gt; thanks to &lt;a href=&quot;http://en.wikipedia.org/wiki/Time_zone&quot;&gt;&lt;i&gt;Wikipedia&lt;/i&gt;&lt;/a&gt;, for the oh-so-meaningful meaning of &lt;a href=&quot;http://en.wikipedia.org/wiki/Time_zone&quot;&gt;&lt;b&gt;Timezone&lt;/b&gt;&lt;/a&gt;.
+&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2&gt;What do you need before changing timezone on Heroku Cedar stack?&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;b&gt;Appropriate Timezone Name String?&lt;/b&gt; That sounds weird?&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;First,&lt;/b&gt; you really need to know your desired appropriate zone name string.&lt;/p&gt;
 
-</description>
-        <pubDate>Tue, 13 Oct 2015 22:40:50 +0800</pubDate>
-        <link>http://ertbot.co/jekyll/update/2015/10/13/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://ertbot.co/jekyll/update/2015/10/13/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+&lt;p&gt;&lt;b&gt;Search&lt;/b&gt; for your desired zone name string &lt;a href=&quot;http://en.wikipedia.org/wiki/List_of_tz_database_time_zones&quot;&gt;&lt;b&gt;here&lt;/b&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Second,&lt;/b&gt; open your console/shell so that you could perform the command needed in changing the timezone.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Example,&lt;/b&gt; my zone name string is America/Vancouver&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Simply&lt;/b&gt; run this command:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;heroku config:add TZ=America/Vancouver&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;Your Heroku app will restart after!&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;b&gt;Oh well,&lt;/b&gt; you can check/test if it's really working by performing the ff:&lt;br /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;b&gt;In console/shell, run:&lt;/b&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;heroku run console&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Then,&lt;/b&gt; check the time:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;Time.now&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;That should be all set for you!&lt;/b&gt;&lt;/p&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
+
+&lt;!-- Google + --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+&lt;/script&gt;</content><author><name></name></author><category term="heroku" /><category term="cloud" /><summary type="html">Howdy! I know you're here because you're a Heroku fan or a forced Heroku user. Well, it's not a big deal though. Honestly, I really like how you can wrap up things quickly via Heroku. Heroku's automation is way bitcher than bitch. I'm a fan, YES! But it's not that I can always afford their sky-high packages. So much about it, I'll shut my mouth now before a Heroku spy learns everything about me. I want to live longer, you know. What is a timezone? Timezone, is a region that has a uniform standard time for legal, commercial, and social purposes. It is convenient for areas in close commercial or other communication to keep the same time, so time zones tend to follow the boundaries of countries and their subdivisions. By the way, thanks to Wikipedia, for the oh-so-meaningful meaning of Timezone. What do you need before changing timezone on Heroku Cedar stack? Appropriate Timezone Name String? That sounds weird? First, you really need to know your desired appropriate zone name string. Search for your desired zone name string here. Second, open your console/shell so that you could perform the command needed in changing the timezone. Example, my zone name string is America/Vancouver Simply run this command: heroku config:add TZ=America/Vancouver Your Heroku app will restart after! Oh well, you can check/test if it's really working by performing the ff: In console/shell, run: heroku run console Then, check the time: Time.now That should be all set for you!</summary></entry><entry><title type="html">Setting up your default local web server in Mountain Lion</title><link href="http://localhost:4000/mac/osx/2013/09/05/setting-up-your-default-local-web-server-in-mountain-lion.html" rel="alternate" type="text/html" title="Setting up your default local web server in Mountain Lion" /><published>2013-09-05T00:00:00+08:00</published><updated>2013-09-05T00:00:00+08:00</updated><id>http://localhost:4000/mac/osx/2013/09/05/setting-up-your-default-local-web-server-in-mountain-lion</id><content type="html" xml:base="http://localhost:4000/mac/osx/2013/09/05/setting-up-your-default-local-web-server-in-mountain-lion.html">&lt;h2&gt;
+	By default, there is a local web server nailed in your MAC!
+&lt;/h2&gt;
+&lt;p&gt;
+	&lt;b&gt;Before,&lt;/b&gt; you can enable it via System Preferences &amp;gt; Sharing &amp;gt; Web Sharing
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;b&gt;But,&lt;/b&gt; things are already different since Mountain Lion. OS X Mountain Lion does not include Web Sharing as an option in the Sharing preference pane. Mountain Lion does include the Apache HTTP Server, an open-source web server (ref: &lt;a href=&quot;https://discussions.apple.com/&quot;&gt;Apple Discussions Forum)&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h2&gt;How to activate Apache HTTP Server in OSX Mountain Lion?&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/images/posts/apache.png&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;First,&lt;/b&gt; you need to create a &lt;i&gt;.conf&lt;/i&gt; file in your &lt;i&gt;/etc/apache2/users/&lt;/i&gt; folder.&lt;/p&gt;
+&lt;!-- &lt;p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br/&gt;&amp;lt;html &lt;b&gt;class=&quot;fuelux&quot;&lt;/b&gt; lang=&quot;en&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;	 --&gt;
+
+&lt;p&gt;
+	&lt;strong&gt;Run&lt;/strong&gt; this command to create your own:
+&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;sudo pico /etc/apache2/users/username.conf&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Remember&lt;/b&gt; that &lt;i&gt;username&lt;/i&gt; is the short name of your user account:&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Naturally,&lt;/b&gt; the file will be opened in a VIM text editor.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Copy&lt;/b&gt; the following &lt;a href=&quot;https://gist.github.com/xirukitepe/6472728&quot;&gt;sample configuration file&lt;/a&gt; into your own &lt;i&gt;.conf&lt;/i&gt; file. Replace the &lt;i&gt;/Users/xiruki/Sites/&lt;/i&gt; path by your own path.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Make&lt;/b&gt; sure that you already have an existing &lt;i&gt;Sites&lt;/i&gt; folder inside your &lt;i&gt;/Users/username&lt;/i&gt; folder&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Save and Exit!&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Open&lt;/b&gt; your terminal and start your local web server:&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;sudo apachectl start&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;If you didn't encounter any errors upon starting the server, then you may now run other apachectl commands!&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;sudo apachectl stop&lt;/li&gt;
+		&lt;li&gt;sudo apachectl restart&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;b&gt;Lastly,&lt;/b&gt; you may now access your &lt;b&gt;http://localhost&lt;/b&gt;.&lt;br /&gt;
+	This is the default content of your localhost:&lt;br /&gt;&lt;br /&gt;
+	&lt;img src=&quot;/assets/images/posts/it_works.png&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;b&gt;To&lt;/b&gt; access your Sites folder, go to http://localhost/~username/
+&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Now you have your local web server running! Congratulations!&lt;/b&gt;&lt;/p&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
+
+&lt;!-- Google + --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+&lt;/script&gt;</content><author><name></name></author><category term="osx" /><category term="mac" /><category term="apache" /><summary type="html">By default, there is a local web server nailed in your MAC! Before, you can enable it via System Preferences &amp;gt; Sharing &amp;gt; Web Sharing But, things are already different since Mountain Lion. OS X Mountain Lion does not include Web Sharing as an option in the Sharing preference pane. Mountain Lion does include the Apache HTTP Server, an open-source web server (ref: Apple Discussions Forum). How to activate Apache HTTP Server in OSX Mountain Lion? First, you need to create a .conf file in your /etc/apache2/users/ folder. Run this command to create your own: sudo pico /etc/apache2/users/username.conf Remember that username is the short name of your user account: Naturally, the file will be opened in a VIM text editor. Copy the following sample configuration file into your own .conf file. Replace the /Users/xiruki/Sites/ path by your own path. Make sure that you already have an existing Sites folder inside your /Users/username folder Save and Exit! Open your terminal and start your local web server: sudo apachectl start If you didn't encounter any errors upon starting the server, then you may now run other apachectl commands! sudo apachectl stop sudo apachectl restart Lastly, you may now access your http://localhost. This is the default content of your localhost: To access your Sites folder, go to http://localhost/~username/ Now you have your local web server running! Congratulations!</summary></entry><entry><title type="html">Installing Phonegap in MAC OSX</title><link href="http://localhost:4000/mobile/development/2013/09/04/installing-phonegap-in-mac-osx.html" rel="alternate" type="text/html" title="Installing Phonegap in MAC OSX" /><published>2013-09-04T00:00:00+08:00</published><updated>2013-09-04T00:00:00+08:00</updated><id>http://localhost:4000/mobile/development/2013/09/04/installing-phonegap-in-mac-osx</id><content type="html" xml:base="http://localhost:4000/mobile/development/2013/09/04/installing-phonegap-in-mac-osx.html">&lt;h2&gt;
+	Start creating awesome mobile applications using this technology!
+&lt;/h2&gt;
+&lt;p&gt;
+	&lt;a href=&quot;http://phonegap.com/&quot;&gt;Phonegap&lt;/a&gt; is an open source framework for quickly building cross-platform mobile apps using HTML5, Javascript and CSS. It supports various platforms such as...
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;IOS&lt;/li&gt;
+		&lt;li&gt;Android&lt;/li&gt;
+		&lt;li&gt;Blackberry OS&lt;/li&gt;
+		&lt;li&gt;WebOS&lt;/li&gt;
+		&lt;li&gt;Windows&lt;/li&gt;
+		&lt;li&gt;Symbian&lt;/li&gt;
+		&lt;li&gt;Bada&amp;lt;/a&amp;gt;
+	&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;h2&gt;How to install Phonegap in MAC OSX?&lt;/h2&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/assets/images/posts/phonegap.png&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;b&gt;First,&lt;/b&gt; you need to install &lt;a href=&quot;http://nodejs.org/&quot;&gt;Node JS&lt;/a&gt; and &lt;a href=&quot;https://npmjs.org/&quot;&gt;NPM (Node Package Modules)&lt;/a&gt;. We can achieve those via &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;, the missing package manager for OS X. &lt;/p&gt;
+&lt;!-- &lt;p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br/&gt;&amp;lt;html &lt;b&gt;class=&quot;fuelux&quot;&lt;/b&gt; lang=&quot;en&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;	 --&gt;
+
+&lt;p&gt;
+	&lt;strong&gt;Install&lt;/strong&gt; Homebrew via this command:
+&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;After&lt;/b&gt; installing Homebrew, follow the generated instructions!&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Make&lt;/b&gt; sure that once you run the &lt;b&gt;`brew doctor`&lt;/b&gt; command, everything is fine and no warnings are executed.&lt;/p&gt;
+
+&lt;p&gt;Once Homebrew is setup correctly, it's time to install Node JS via brew!&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;brew install node&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Then,&lt;/b&gt; install NPM...&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;curl https://npmjs.org/install.sh | sh&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Finally,&lt;/b&gt; it's time for you to install Phonegap all the way!&lt;/p&gt;
+
+&lt;p&gt;&lt;pre&gt;&lt;code&gt;sudo npm install -g phonegap&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+
+&lt;p&gt;For more info: &lt;a href=&quot;http://phonegap.com/install/&quot;&gt;Check it here!&lt;/a&gt;&lt;/p&gt;
+
+&lt;br /&gt;
+&lt;p&gt;&lt;b&gt;I'll be posting a sample tutorial on how to use Phonegap soon! So wait for it!&lt;/b&gt;&lt;/p&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
+
+&lt;!-- Google + --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+&lt;/script&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</content><author><name></name></author><category term="mobile" /><category term="phonegap" /><summary type="html">Start creating awesome mobile applications using this technology! Phonegap is an open source framework for quickly building cross-platform mobile apps using HTML5, Javascript and CSS. It supports various platforms such as... IOS Android Blackberry OS WebOS Windows Symbian Bada&amp;lt;/a&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/p&amp;gt; How to install Phonegap in MAC OSX? First, you need to install Node JS and NPM (Node Package Modules). We can achieve those via Homebrew, the missing package manager for OS X. Install Homebrew via this command: ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)&quot; After installing Homebrew, follow the generated instructions! Make sure that once you run the `brew doctor` command, everything is fine and no warnings are executed. Once Homebrew is setup correctly, it's time to install Node JS via brew! brew install node Then, install NPM... curl https://npmjs.org/install.sh | sh Finally, it's time for you to install Phonegap all the way! sudo npm install -g phonegap For more info: Check it here! I'll be posting a sample tutorial on how to use Phonegap soon! So wait for it!</summary></entry><entry><title type="html">First encounter with RAILS</title><link href="http://localhost:4000/ruby/on/rails/2013/08/26/first-encounter-with-rails.html" rel="alternate" type="text/html" title="First encounter with RAILS" /><published>2013-08-26T00:00:00+08:00</published><updated>2013-08-26T00:00:00+08:00</updated><id>http://localhost:4000/ruby/on/rails/2013/08/26/first-encounter-with-rails</id><content type="html" xml:base="http://localhost:4000/ruby/on/rails/2013/08/26/first-encounter-with-rails.html">&lt;h2&gt;
+	So given that you came from a lot of other programming languages &lt;br /&gt; and frameworks...
+&lt;/h2&gt;
+&lt;p&gt;
+	PHP, ASP.net, Java, C#, Perl, VB, Lua, Python, etc..&lt;br /&gt;
+	And you want to apprise yourself that RUBY has its own frameworks too.
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.padrinorb.com/&quot; target=&quot;_blank&quot;&gt;Padrino&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://ramaze.net/&quot; target=&quot;_blank&quot;&gt;Ramaze&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://sinatra.rubyforge.org/&quot; target=&quot;_blank&quot;&gt;Sinatra&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://tizoc.github.com/fiasco/&quot;&gt;Fiasco&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.merbivore.com/&quot;&gt;Merb&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.rubyonrails.org/&quot;&gt;Rails&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;and &lt;a href=&quot;http://vemod.net/list-of-ruby-web-frameworks&quot;&gt;more...&lt;/a&gt;
+	&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;h2&gt;RAILS? Can I eat that?&lt;/h2&gt;
+&lt;br /&gt;
+&lt;img src=&quot;/assets/images/ruby.png&quot; /&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;I wouldn't say that &lt;a href=&quot;http://rubyonrails.org&quot;&gt;Rails&lt;/a&gt; is the best of the best. But I might say that Rails is in the mainstream apart from other &lt;a href=&quot;http://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; frameworks.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;First,&lt;/b&gt; you might say that it will be hard for you to accept it from soup to nuts because it looks really weird and unpopular unlike PHP and other stuffs.&lt;/p&gt;
+&lt;!-- &lt;p&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;br/&gt;&amp;lt;html &lt;b&gt;class=&quot;fuelux&quot;&lt;/b&gt; lang=&quot;en&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;	 --&gt;
+
+&lt;p&gt;
+	&lt;strong&gt;But,&lt;/strong&gt; the thing is that... You will surely love its unique structure and marvelous concept.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Second,&lt;/b&gt; you don't need to force yourself to learn everything quickly! Of course, it would not be so easy if it's just your first time to use an MVC framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Third,&lt;/b&gt; if you already have an experience in MVC frameworks just like &lt;a href=&quot;http://zendframework.com/&quot;&gt;ZEND for PHP&lt;/a&gt;, &lt;a href=&quot;http://www.djangoproject.com/&quot;&gt;Django for Python&lt;/a&gt;, &lt;a href=&quot;http://www.asp.net/mvc/&quot;&gt;ASP.net MVC for .net&lt;/a&gt;, &lt;a href=&quot;http://www.seaside.st/&quot;&gt;Seaside for Smalltalk&lt;/a&gt;, &lt;a href=&quot;http://catalystframework.org/&quot;&gt;Catalyst for Perl&lt;/a&gt;, &lt;a href=&quot;http://wicket.apache.org/&quot;&gt;Wicket for Java&lt;/a&gt; and other frameworks... then it would be easy for you to accept RAILS. I'm sure about that.&lt;/p&gt;
+
+&lt;br /&gt;
+
+&lt;img src=&quot;/assets/images/rails.png&quot; /&gt;
+
+&lt;br /&gt;&lt;br /&gt;
+
+&lt;p&gt;&lt;b&gt;Thousands of companies (from startup to giant) are already using RAILS for their applications.&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;http://github.com/&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.basecamphq.com/?source=rails&quot; target=&quot;_blank&quot;&gt;Basecamp&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.twitter.com/&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.groupon.com/&quot;&gt;Groupon&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.shopify.com/&quot;&gt;Shopify&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;http://www.yellowpages.com/&quot;&gt;Yellowpages&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;and a lot more...&amp;lt;/a&amp;gt;
+	&amp;lt;/ul&amp;gt;
+&amp;lt;/p&amp;gt;
+
+
+&lt;p&gt;That is it!  You can now say that &lt;a href=&quot;http://rubyonrails.org&quot; target=&quot;_blank&quot;&gt;Ruby on Rails&lt;/a&gt; is a promising Ruby framework.&lt;/p&gt;
+
+&lt;h2&gt;What do I need to make it possible?&lt;/h2&gt;
+&lt;p&gt;References were baked in as well! If you want to start learning RAILS immediately... then you need the following steps (randomly):&lt;/p&gt;
+
+&lt;p&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Start lurking around the official site to get an overview about &lt;a href=&quot;http://rubyonrails.org&quot; target=&quot;_blank&quot;&gt;RAILS!&lt;/a&gt; This site should be one of your official homes. Of course, you still need a real home. Lol. And we all know that we cannot live virtually forever. RAILS has a nice &lt;a href=&quot;http://weblog.rubyonrails.org&quot;&gt;blog&lt;/a&gt; for recent news and announcements too. You have to be updated too. Also, the RAILS people are generous enough to deliver a good set of guidelines and &lt;i&gt;&quot;Getting Started&quot;&lt;/i&gt; articles for the community. Please see the official &lt;a href=&quot;http://guides.rubyonrails.org&quot;&gt;Guide book&lt;/a&gt; and detailed &lt;a href=&quot;http://www.rubyonrails.org/docs&quot;&gt;documentation&lt;/a&gt;.&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;Read EBOOKS such as &lt;a href=&quot;http://beginningrails.com/&quot;&gt;Beginning Rails 3&lt;/a&gt;, &lt;a href=&quot;http://www.manning.com/bigg2/&quot;&gt;Rails in Action&lt;/a&gt;, &lt;a href=&quot;http://shop.oreilly.com/product/9780987467423.do&quot;&gt;Jump Start Rails&lt;/a&gt;, and some other books by &lt;a href=&quot;http://pragprog.com/categories/ruby_and_rails&quot;&gt;Pragmatic Bookshelf&lt;/a&gt;. Ebooks are complete and very detailed. So, if you want to gain a lot of information and you are into reading books then this step might be just for you.&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;I would also like to recommend the most popular Rails tutorial by Michael Hartl. Go &lt;a href=&quot;http://ruby.railstutorial.org/ruby-on-rails-tutorial-book&quot;&gt;here&lt;/a&gt; and be amazed!&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;If you are used to learn via Screencasts and/or video tutorials, then &lt;a href=&quot;http://railscasts.com/&quot;&gt;Railscasts&lt;/a&gt; and &lt;a href=&quot;https://peepcode.com/&quot;&gt;Peepcode&lt;/a&gt; would be suitable for you.&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;Did you know that you can also learn RAILS interactively? Online courses in a bright and fun way would be so nice to try! Learn a lot of stuffs from &lt;a href=&quot;http://www.codeschool.com/&quot;&gt;Code School&lt;/a&gt;. They have an awesome kick named &lt;a href=&quot;http://railsforzombies.org/&quot;&gt;Rails for Zombies&lt;/a&gt; that you would possibly enjoy! Websites that are related with Code School are... &lt;a href=&quot;http://www.codelearn.org/&quot;&gt;Code Learn&lt;/a&gt;, &lt;a href=&quot;http://www.codecademy.com/&quot;&gt;Code Academy&lt;/a&gt; etc..&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;Gems are plugins-like that would be helpful for your starter apps. See the official &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt; site for more info. Related stuffs: &lt;a href=&quot;http://ruby-toolbox.com/&quot;&gt;Ruby Toolbox&lt;/a&gt;, &lt;a href=&quot;https://gemnasium.com/&quot;&gt;Gemnasium&lt;/a&gt;, &lt;a href=&quot;https://gemcanary.com/&quot;&gt;Gemcanary&lt;/a&gt; and more more more.&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;If you get stuck and you need some help... Don't hesitate to ask for a hand. You could ask some RAILS related questions in &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;, and/or straight from the &lt;a href=&quot;http://rubyonrails.org/community&quot;&gt;Rails community&lt;/a&gt;. Forum? Visit &lt;a href=&quot;http://railsforum.com&quot;&gt;Rails Forum&lt;/a&gt; for more connections.&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;
+			Bloggers also exist to give us more knowledge about Rails. &lt;a href=&quot;http://www.rubyflow.com/&quot;&gt;Ruby Flow&lt;/a&gt; and &lt;a href=&quot;http://www.planetrubyonrails.com/&quot;&gt;Planet Ruby on Rails&lt;/a&gt; are some of the good examples.
+		&lt;/li&gt;
+		&lt;br /&gt;
+		&lt;li&gt;Before anything else, please make sure that you already have a working Rails environment in your machine! Read installation instructions from this &lt;a href=&quot;http://railsapps.github.io/installing-rails.html&quot;&gt;post&lt;/a&gt; or this &lt;a href=&quot;http://installfest.railsbridge.org/installfest/&quot;&gt;post&lt;/a&gt;. I'll be posting my own version soon!&lt;/li&gt;
+
+		&lt;br /&gt;
+
+		&lt;li&gt;Also, &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt; is a place where you can see a lot of working sample applications using RAILS. Recent details about various working gems are also posted there. I'll be also posting a post to what Git is all about!&lt;/li&gt;
+
+	&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h2&gt;A sense of patience, fun and hardwork&lt;/h2&gt;
+&lt;p&gt;It is clear that &lt;i&gt;&quot;Nothing is easy for the first time&quot;&lt;/i&gt;. It's not as easy as pie. There's &lt;a href=&quot;http://www.metrolyrics.com/nothing-like-the-1st-time-lyrics-katy-perry.html&quot;&gt;nothing like the first time&lt;/a&gt;, so you have to be more patient and hardworking. Learning is fun and it never stops. In this &lt;a href=&quot;http://railsforum.com/topic/224-hi-im-xiruki/&quot;&gt;Rails Forum post&lt;/a&gt;, I posted a little bit about my first impression with RAILS. Hope you will learn something from there.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;!-- Twitter --&gt;
+&lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);&lt;/script&gt;
+
+&lt;!-- Google + --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+&lt;/script&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</content><author><name></name></author><category term="rubyonrails" /><category term="ruby" /><category term="programming" /><category term="web" /><summary type="html">So given that you came from a lot of other programming languages and frameworks... PHP, ASP.net, Java, C#, Perl, VB, Lua, Python, etc.. And you want to apprise yourself that RUBY has its own frameworks too. Padrino Ramaze Sinatra Fiasco Merb Rails and more... &amp;lt;/ul&amp;gt; &amp;lt;/p&amp;gt; RAILS? Can I eat that? I wouldn't say that Rails is the best of the best. But I might say that Rails is in the mainstream apart from other Ruby frameworks. First, you might say that it will be hard for you to accept it from soup to nuts because it looks really weird and unpopular unlike PHP and other stuffs. But, the thing is that... You will surely love its unique structure and marvelous concept. Second, you don't need to force yourself to learn everything quickly! Of course, it would not be so easy if it's just your first time to use an MVC framework. Third, if you already have an experience in MVC frameworks just like ZEND for PHP, Django for Python, ASP.net MVC for .net, Seaside for Smalltalk, Catalyst for Perl, Wicket for Java and other frameworks... then it would be easy for you to accept RAILS. I'm sure about that. Thousands of companies (from startup to giant) are already using RAILS for their applications. Github Basecamp Twitter Groupon Shopify Yellowpages and a lot more...&amp;lt;/a&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/p&amp;gt; That is it! You can now say that Ruby on Rails is a promising Ruby framework. What do I need to make it possible? References were baked in as well! If you want to start learning RAILS immediately... then you need the following steps (randomly): Start lurking around the official site to get an overview about RAILS! This site should be one of your official homes. Of course, you still need a real home. Lol. And we all know that we cannot live virtually forever. RAILS has a nice blog for recent news and announcements too. You have to be updated too. Also, the RAILS people are generous enough to deliver a good set of guidelines and &quot;Getting Started&quot; articles for the community. Please see the official Guide book and detailed documentation. Read EBOOKS such as Beginning Rails 3, Rails in Action, Jump Start Rails, and some other books by Pragmatic Bookshelf. Ebooks are complete and very detailed. So, if you want to gain a lot of information and you are into reading books then this step might be just for you. I would also like to recommend the most popular Rails tutorial by Michael Hartl. Go here and be amazed! If you are used to learn via Screencasts and/or video tutorials, then Railscasts and Peepcode would be suitable for you. Did you know that you can also learn RAILS interactively? Online courses in a bright and fun way would be so nice to try! Learn a lot of stuffs from Code School. They have an awesome kick named Rails for Zombies that you would possibly enjoy! Websites that are related with Code School are... Code Learn, Code Academy etc.. Gems are plugins-like that would be helpful for your starter apps. See the official RubyGems site for more info. Related stuffs: Ruby Toolbox, Gemnasium, Gemcanary and more more more. If you get stuck and you need some help... Don't hesitate to ask for a hand. You could ask some RAILS related questions in Stack Overflow, and/or straight from the Rails community. Forum? Visit Rails Forum for more connections. Bloggers also exist to give us more knowledge about Rails. Ruby Flow and Planet Ruby on Rails are some of the good examples. Before anything else, please make sure that you already have a working Rails environment in your machine! Read installation instructions from this post or this post. I'll be posting my own version soon! Also, Github is a place where you can see a lot of working sample applications using RAILS. Recent details about various working gems are also posted there. I'll be also posting a post to what Git is all about! A sense of patience, fun and hardwork It is clear that &quot;Nothing is easy for the first time&quot;. It's not as easy as pie. There's nothing like the first time, so you have to be more patient and hardworking. Learning is fun and it never stops. In this Rails Forum post, I posted a little bit about my first impression with RAILS. Hope you will learn something from there.</summary></entry></feed>
