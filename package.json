@@ -20,7 +20,7 @@
     "browser-sync": "^2.26.7",
     "cryptiles": ">=4.1.2",
     "debug": ">=2.6.9",
-    "express": ">=3.11.0",
+    "express": ">=4.17.3",
     "extend": ">=3.0.2",
     "fresh": ">=0.5.2",
     "gulp": "^3.9.1",
