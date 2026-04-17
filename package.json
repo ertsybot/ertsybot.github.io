@@ -31,7 +31,7 @@
     "randomatic": ">=3.0.0",
     "sshpk": ">=1.13.2",
     "stringstream": ">=0.0.6",
-    "ws": ">=3.3.1"
+    "ws": ">=7.4.6"
   },
   "dependencies": {},
   "description": ""
